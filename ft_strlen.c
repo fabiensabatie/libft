@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <string.h>
+
+size_t	ft_strlen(const char *str)
 {
 	int len;
 

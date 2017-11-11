@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <string.h>
 
-char	*ft_strnstr(char *haystack, char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t needle_size;
 	size_t counter;
@@ -22,13 +22,13 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 	needle_size = (size_t)ft_strlen(needle);
 	i = 0;
 	if (*needle == '\0')
-		return (haystack);
+		return ((char*)haystack);
 	while (haystack[i] && len--)
 	{
 		counter = 0;
 		while (needle[counter] == haystack[i++] && counter <= len)
 			if (++counter == needle_size)
-				return (&haystack[i - counter]);
+				return ((char*)&haystack[i - counter]);
 		i -= counter;
 	}
 	return (NULL);

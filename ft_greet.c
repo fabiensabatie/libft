@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_greet.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsabatie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 14:09:06 by fsabatie          #+#    #+#             */
-/*   Updated: 2017/11/08 14:09:07 by fsabatie         ###   ########.fr       */
+/*   Created: 2017/11/11 12:07:58 by fsabatie          #+#    #+#             */
+/*   Updated: 2017/11/11 12:08:00 by fsabatie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
+#include <unistd.h>
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+void	ft_greet(char *name)
 {
-	int i;
+	char heart[3];
 
-	i = 0;
-	while (s1[i])
-		i++;
-	while (*s2 && n--)
-		s1[i++] = *s2++;
-	s1[i] = '\0';
-	return (s1);
+	heart[0] = 0xE2;
+	heart[1] = 0x99;
+	heart[2] = 0xA5;
+	ft_putstr("Hey ");
+	ft_putstr(name);
+	ft_putstr(", nice to see you ! You look awesome today ;) ! ");
+	write(1, heart, 3);
+	ft_putchar('\n');
 }

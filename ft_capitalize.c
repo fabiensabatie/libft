@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_capitalize.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsabatie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 14:09:06 by fsabatie          #+#    #+#             */
-/*   Updated: 2017/11/08 14:09:07 by fsabatie         ###   ########.fr       */
+/*   Created: 2017/11/11 12:22:38 by fsabatie          #+#    #+#             */
+/*   Updated: 2017/11/11 12:22:39 by fsabatie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+void	ft_capitalize(char *str)
 {
-	int i;
-
-	i = 0;
-	while (s1[i])
-		i++;
-	while (*s2 && n--)
-		s1[i++] = *s2++;
-	s1[i] = '\0';
-	return (s1);
+	if (str)
+		*str = ft_toupper(*str);
 }

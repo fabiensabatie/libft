@@ -12,12 +12,12 @@
 
 #include <string.h>
 
-char	*ft_strchr(char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
 	while (*str)
 		if (*str++ == c)
-			return (str - 1);
+			return ((char*)str - 1);
 	if (!c)
-		return (str);
+		return ((char*)str);
 	return (NULL);
 }

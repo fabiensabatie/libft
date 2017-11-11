@@ -15,6 +15,7 @@ NAME = libft.a
 SRC_NAME =  ft_strjoin_char.c \
 			ft_putendl_fd.c \
 			ft_putchar_fd.c \
+			ft_capitalize.c \
 			ft_putnbr_fd.c \
 			ft_putstr_fd.c \
 			ft_lstdelone.c \
@@ -71,6 +72,7 @@ SRC_NAME =  ft_strjoin_char.c \
 			ft_memcpy.c \
 			ft_strrev.c \
 			ft_bzero.c \
+			ft_greet.c \
 			ft_atoi.c \
 			ft_itoa.c \
 			ft_abs.c

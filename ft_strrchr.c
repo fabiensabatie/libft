@@ -12,15 +12,15 @@
 
 #include <string.h>
 
-char	*ft_strrchr(char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	char *last;
 
 	last = NULL;
 	while (*str)
 		if (*str++ == c)
-			last = str - 1;
+			last = (char *)str - 1;
 	if (!c)
-		return (str);
+		return ((char *)str);
 	return (last);
 }
